@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Countdown Timer</title>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/e1b8aa5305.js"></script>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Source+Sans+Pro:300,400,600,700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800&display=swap" rel="stylesheet">
+    <!-- grid -->
+    <link rel="stylesheet" href="assets/css/grid.css">
+    <!-- style -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- media-query -->
+    <link rel="stylesheet" href="assets/css/media-query.css">
+</head>
+
+<body>
+
+    <!-- HERO-SECTION -->
+    <section id="home-section">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-timer d-flex">
+                    <div class="timer-item">
+                        <h2 id="days">178</h2>
+                        <h3>DAY</h3>
+                    </div>
+                    <div class="timer-item">
+                        <h2 id="hours">18</h2>
+                        <h3>HOURS</h3>
+                    </div>
+                    <div class="timer-item">
+                        <h2 id="minutes">45</h2>
+                        <h3>MINUTES</h3>
+                    </div>
+                    <div class="timer-item">
+                        <h2 id="seconds">58</h2>
+                        <h3>SECONDS</h3>
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <h2>ES6 workshop 2020</h2>
+                    <h3>21 - 30 June 2020, Dhaka, Bangladesh</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="main-footer">
+        <div class="copyright-txt txt-center">
+            <div class="container">
+                <p>Copyright 2019 by <a href="https://github.com/iamsaief">Saief Al Emon</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-1.12.4.min.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <!-- Coundown Js -->
+    <script>
+        // Date and Time for the countdown to end 
+        const launchTime = new Date("June 30, 2020 00:00:00").getTime();
+
+        function countDown() {
+            const currentTime = new Date().getTime();
+            const timeDifference = launchTime - currentTime;
+
+            let seconds = Math.floor(timeDifference / 1000);
+            let minutes = Math.floor(seconds / 60);
+            let hours = Math.floor(minutes / 60);
+            let days = Math.floor(hours / 24);
+
+            hours = hours % 24;
+            minutes = minutes % 60;
+            seconds = seconds % 60;
+
+            hours = (hours < 10 && hours > 0) ? "0" + hours : hours;
+            minutes = (minutes < 10 && minutes > 0) ? "0" + minutes : minutes;
+            seconds = (seconds < 10 && seconds > 0) ? "0" + seconds : seconds;
+
+            //printing the calculated time
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            //timer countdown in seconds
+            setTimeout(countDown, 1000);
+        }
+        countDown();
+    </script>
+</body>
+
+</html>

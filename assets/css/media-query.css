@@ -1,0 +1,98 @@
+/* ******************************************** MIN-WIDTH ****** */
+
+/* SMALL (sm) devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {}
+
+/* MEDIUM (md) devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* LARGE (lg) devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* EXTRA LARGE (xl) devices (LARGE (lg) desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+
+/* ******************************************** MAX-WIDTH ****** */
+/* LARGE (lg) devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+
+    h2 br,
+    h3 br,
+    h4 br,
+    h5 br,
+    p br {
+        display: none;
+    }
+}
+
+/* MEDIUM (md) devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {}
+
+/* SMALL (sm) devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+    .hero-timer .timer-item:not(:first-child) {
+        padding-left: 20px;
+    }
+
+    .hero-timer .timer-item {
+        padding: 0;
+    }
+
+    .hero-timer .timer-item h2,
+    .hero-text h2 {
+        font-size: 45px;
+        line-height: 1;
+    }
+
+    .hero-timer .timer-item h3,
+    .hero-text h3 {
+        font-size: 18px;
+        line-height: 1;
+    }
+
+
+}
+
+/* EXTRA SMALL (xs) devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {}
+
+/* EXTRA SMALL (xs) devices (portrait phones, less than 450px) */
+@media (max-width: 450px) {
+
+    .hero-timer .timer-item h2 {
+        font-size: 30px;
+    }
+
+    .hero-text h2 {
+        font-size: 30px;
+    }
+
+    .hero-timer .timer-item h3,
+    .hero-text h3 {
+        font-size: 14px;
+    }
+
+
+}
+
+/* EXTRA SMALL (xs) devices (portrait phones, less than 350px) */
+@media (max-width: 350px) {}
+
+
+/* ******************************************** MIN and MAX WIDTH ****** */
+/* EXTRA SMALL (xs) devices (landscape phones, 450px and upto 992px) */
+@media (min-width: 450px) and (max-width: 991.98px) {}
+
+/* SMALL (sm) devices (landscape phones, 576px and upto 768px) */
+@media (min-width: 576px) and (max-width: 767.98px) {}
+
+/* SMALL (sm) devices (landscape phones, 576px and upto 992px) */
+@media (min-width: 576px) and (max-width: 991.98px) {}
+
+/* MEDIUM (md) devices (tablets, 768px and upto 992px) */
+@media (min-width: 768px) and (max-width: 991.98px) {}
+
+/* LARGE (lg) devices (desktops, 992px and upto 1200px) */
+@media (min-width: 992px) and (max-width: 1199.98px) {}
