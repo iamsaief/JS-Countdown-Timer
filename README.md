@@ -3,3 +3,5 @@ Simple timer to countdown for a certain period of time, you just have to set the
 
 > Visit this github page :
 [JS Countdown Timer ](https://iamsaief.github.io/JavaScript-Countdown-Timer/)
+
+> or you can [See it on codepen](https://codepen.io/iamsaief/pen/LKrQMJ)
